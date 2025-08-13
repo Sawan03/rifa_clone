@@ -35,22 +35,25 @@
             </div>
             
             <nav class="navbar">
-                <div class="logo">
-                    <div class="logo-icon"></div>
-                    <span>Rifa</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">HOME</a></li>
-                    <li><a href="#contest" class="nav-link">CONTEST</a></li>
-                    <li><a href="#winners" class="nav-link">WINNERS</a></li>
-                    <li><a href="#pages" class="nav-link">PAGES</a></li>
-                    <li><a href="#contact" class="nav-link">CONTACT</a></li>
-                </ul>
-                <button class="buy-tickets-btn">
-                    <i class="fas fa-bolt"></i>
-                    BUY TICKETS
-                </button>
-            </nav>
+    <div class="nav-logo">
+        <img src="img/logo.jpg" alt="Rifa Logo" class="logo-img">
+        
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">HOME</a></li>
+        <li><a href="#contest" class="nav-link">CONTEST</a></li>
+        <li><a href="#winners" class="nav-link">WINNERS</a></li>
+        <li><a href="#pages" class="nav-link">PAGES</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+
+    <button class="buy-tickets-btn">
+        <i class="fas fa-bolt"></i>
+        BUY TICKETS
+    </button>
+</nav>
+
         </div>
     </header>
 
@@ -133,137 +136,225 @@
         </div>
     </section>
 
-    <!-- Current Contest Section -->
-    <section id="contest" class="current-contest">
+    <!-- Weekly Schedule Section -->
+    <section id="contest" class="weekly-schedule">
         <div class="container">
             <div class="section-header">
-                <h2>CURRENT CONTEST</h2>
-                <p>Participants buy tickets and lots are drawn to determine the winners.</p>
+                <p class="section-subtitle">Weekly Prize Schedule</p>
+                <h2>WEEKLY CONTEST SCHEDULE</h2>
+                <p>Check out our exciting daily prizes throughout the week!</p>
             </div>
             
-            <div class="contest-filters">
-                <button class="filter-btn active">
-                    <i class="fas fa-car"></i>
-                    DREAM CAR
-                </button>
-                <button class="filter-btn">
-                    <i class="fas fa-heart"></i>
-                    ALL LIFESTYLE
-                </button>
+            <!-- Day Selection Tabs -->
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-day="friday">FURIOUS FRIDAY</button>
+                <button class="tab-btn" data-day="saturday">SATURDAY</button>
+                <button class="tab-btn" data-day="sunday">SUNDAY</button>
+                <button class="tab-btn" data-day="monday">MONDAY</button>
+                <button class="tab-btn" data-day="tuesday">TORNADO TUESDAY</button>
+                <button class="tab-btn" data-day="wednesday">WEDNESDAY</button>
             </div>
             
-            <div class="contest-grid">
-                <div class="contest-card">
-                    <div class="card-badge">
-                        <i class="fas fa-heart"></i>
+            <!-- Furious Friday -->
+            <div class="day-schedule active" id="friday">
+                <div class="day-title">
+                    <div class="special-badge">FURIOUS FRIDAY</div>
+                    <h3>Special Friday Bonanza</h3>
+                </div>
+                <div class="prizes-grid">
+                    <div class="prize-card">
+                        <div class="prize-rank">1</div>
+                        <div class="prize-title">Grand Prize</div>
+                        <div class="prize-value">₹1 Crore</div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop&crop=center" alt="Yellow Sports Car">
-                    <div class="card-content">
-                        <div class="contest-info">
-                            <span class="contest-number">Contest No: B2T</span>
-                            <span class="ticket-price">$3.99<br><small>Ticket Price</small></span>
-                        </div>
-                        <h3>The Breeze Zodiac IX</h3>
-                        <div class="contest-status">
-                            <div class="time-left">
-                                <i class="fas fa-clock"></i>
-                                <span>5d</span>
-                            </div>
-                            <div class="tickets-remaining">
-                                <i class="fas fa-ticket-alt"></i>
-                                <span>9805 Remaining</span>
-                            </div>
-                        </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">2</div>
+                        <div class="prize-title">Second Prize</div>
+                        <div class="prize-value">1 Flat or ₹50 Lac</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">3</div>
+                        <div class="prize-title">Third Prize</div>
+                        <div class="prize-value">1 Car or ₹30 Lac</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">4</div>
+                        <div class="prize-title">Fourth Prize</div>
+                        <div class="prize-value">Royal Enfield</div>
                     </div>
                 </div>
-                
-                <div class="contest-card">
-                    <div class="card-badge">
-                        <i class="fas fa-heart"></i>
+                <div class="additional-prizes">
+                    <h4>Bonus Prizes</h4>
+                    <p>96 Additional Awards valued at ₹5,000 each</p>
+                </div>
+            </div>
+            
+            <!-- Saturday -->
+            <div class="day-schedule" id="saturday">
+                <div class="day-title">
+                    <h3>Saturday Specials</h3>
+                </div>
+                <div class="prizes-grid">
+                    <div class="prize-card">
+                        <div class="prize-rank">1</div>
+                        <div class="prize-title">Grand Prize</div>
+                        <div class="prize-value">₹1 Crore</div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop&crop=center" alt="White Convertible">
-                    <div class="card-content">
-                        <div class="contest-info">
-                            <span class="contest-number">Contest No: X9U</span>
-                            <span class="ticket-price">$3.99<br><small>Ticket Price</small></span>
-                        </div>
-                        <h3>The Del Sol Trailblazer</h3>
-                        <div class="contest-status">
-                            <div class="time-left">
-                                <i class="fas fa-clock"></i>
-                                <span>5d</span>
-                            </div>
-                            <div class="tickets-remaining">
-                                <i class="fas fa-ticket-alt"></i>
-                                <span>9805 Remaining</span>
-                            </div>
-                        </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">2</div>
+                        <div class="prize-title">Second Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">3</div>
+                        <div class="prize-title">Third Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">4</div>
+                        <div class="prize-title">Fourth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">5</div>
+                        <div class="prize-title">Fifth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
                     </div>
                 </div>
-                
-                <div class="contest-card">
-                    <div class="card-badge">
-                        <i class="fas fa-heart"></i>
+            </div>
+            
+            <!-- Sunday -->
+            <div class="day-schedule" id="sunday">
+                <div class="day-title">
+                    <h3>Sunday Winners</h3>
+                </div>
+                <div class="prizes-grid">
+                    <div class="prize-card">
+                        <div class="prize-rank">1</div>
+                        <div class="prize-title">Grand Prize</div>
+                        <div class="prize-value">1 Flat or ₹50 Lac</div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c5303bea?w=400&h=250&fit=crop&crop=center" alt="Orange McLaren">
-                    <div class="card-content">
-                        <div class="contest-info">
-                            <span class="contest-number">Contest No: 8Y3</span>
-                            <span class="ticket-price">$3.99<br><small>Ticket Price</small></span>
-                        </div>
-                        <h3>The Miata Dart IV</h3>
-                        <div class="contest-status">
-                            <div class="time-left">
-                                <i class="fas fa-clock"></i>
-                                <span>5d</span>
-                            </div>
-                            <div class="tickets-remaining">
-                                <i class="fas fa-ticket-alt"></i>
-                                <span>9805 Remaining</span>
-                            </div>
-                        </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">2</div>
+                        <div class="prize-title">Second Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">3</div>
+                        <div class="prize-title">Third Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">4</div>
+                        <div class="prize-title">Fourth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">5</div>
+                        <div class="prize-title">Fifth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
                     </div>
                 </div>
-                
-                <div class="contest-card">
-                    <div class="card-badge">
-                        <i class="fas fa-heart"></i>
+            </div>
+            
+            <!-- Monday -->
+            <div class="day-schedule" id="monday">
+                <div class="day-title">
+                    <h3>Monday Madness</h3>
+                </div>
+                <div class="prizes-grid">
+                    <div class="prize-card">
+                        <div class="prize-rank">1</div>
+                        <div class="prize-title">Grand Prize</div>
+                        <div class="prize-value">1 Car</div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop&crop=center" alt="Red Sports Car">
-                    <div class="card-content">
-                        <div class="contest-info">
-                            <span class="contest-number">Contest No: R3D</span>
-                            <span class="ticket-price">$3.99<br><small>Ticket Price</small></span>
-                        </div>
-                        <h3>The Ferrari Dream</h3>
+                    <div class="prize-card">
+                        <div class="prize-rank">2</div>
+                        <div class="prize-title">Second Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">3</div>
+                        <div class="prize-title">Third Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">4</div>
+                        <div class="prize-title">Fourth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">5</div>
+                        <div class="prize-title">Fifth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
                     </div>
                 </div>
-                
-                <div class="contest-card">
-                    <div class="card-badge">
-                        <i class="fas fa-heart"></i>
+            </div>
+            
+            <!-- Tornado Tuesday -->
+            <div class="day-schedule" id="tuesday">
+                <div class="day-title">
+                    <div class="special-badge">TORNADO TUESDAY</div>
+                    <h3>Super Tuesday Storm</h3>
+                </div>
+                <div class="prizes-grid">
+                    <div class="prize-card">
+                        <div class="prize-rank">1</div>
+                        <div class="prize-title">Grand Prize</div>
+                        <div class="prize-value">₹1 Crore</div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop&crop=center" alt="White Audi">
-                    <div class="card-content">
-                        <div class="contest-info">
-                            <span class="contest-number">Contest No: A8Q</span>
-                            <span class="ticket-price">$3.99<br><small>Ticket Price</small></span>
-                        </div>
-                        <h3>The Luxury Sedan</h3>
+                    <div class="prize-card">
+                        <div class="prize-rank">2</div>
+                        <div class="prize-title">Second Prize</div>
+                        <div class="prize-value">1 Flat or ₹50 Lac</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">3</div>
+                        <div class="prize-title">Third Prize</div>
+                        <div class="prize-value">1 Car or ₹30 Lac</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">4</div>
+                        <div class="prize-title">Fourth Prize</div>
+                        <div class="prize-value">Royal Enfield</div>
                     </div>
                 </div>
-                
-                <div class="contest-card">
-                    <div class="card-badge">
-                        <i class="fas fa-heart"></i>
+                <div class="additional-prizes">
+                    <h4>Bonus Prizes</h4>
+                    <p>96 Additional Awards valued at ₹5,000 each</p>
+                </div>
+            </div>
+            
+            <!-- Wednesday -->
+            <div class="day-schedule" id="wednesday">
+                <div class="day-title">
+                    <h3>Wednesday Wonders</h3>
+                </div>
+                <div class="prizes-grid">
+                    <div class="prize-card">
+                        <div class="prize-rank">1</div>
+                        <div class="prize-title">Grand Prize</div>
+                        <div class="prize-value">Royal Enfield</div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?w=400&h=250&fit=crop&crop=center" alt="Red Mustang">
-                    <div class="card-content">
-                        <div class="contest-info">
-                            <span class="contest-number">Contest No: M6T</span>
-                            <span class="ticket-price">$3.99<br><small>Ticket Price</small></span>
-                        </div>
-                        <h3>The American Muscle</h3>
+                    <div class="prize-card">
+                        <div class="prize-rank">2</div>
+                        <div class="prize-title">Second Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">3</div>
+                        <div class="prize-title">Third Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">4</div>
+                        <div class="prize-title">Fourth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
+                    </div>
+                    <div class="prize-card">
+                        <div class="prize-rank">5</div>
+                        <div class="prize-title">Fifth Prize</div>
+                        <div class="prize-value">Coming Soon</div>
                     </div>
                 </div>
             </div>
