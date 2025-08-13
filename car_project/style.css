@@ -93,34 +93,30 @@ body {
     padding: 15px 0;
 }
 
-.logo {
+
+
+
+.nav-logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
 }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #ff6b9d, #6c5ce7, #74b9ff);
-    border-radius: 50%;
-    position: relative;
+.logo-img {
+    width: 60px;   /* increased from 100px */
+    height: auto;   /* keeps proportions */
+    border-radius: 15px;
+    object-fit: cover;
 }
 
-.logo-icon::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
+.logo-text {
+    font-size: 1.8rem; /* slightly bigger text */
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff6363, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 .nav-menu {
     display: flex;
@@ -1051,6 +1047,251 @@ body {
 
 .subscribe-btn:hover {
     transform: translateY(-2px);
+}
+
+
+/* Weekly Schedule Section */
+.weekly-schedule {
+    padding: 80px 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.day-schedule {
+    display: none;
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.day-schedule.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.day-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.day-title h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.special-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prizes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.prize-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.prize-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.prize-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.prize-rank {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.prize-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.prize-value {
+    color: #667eea;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.additional-prizes {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.additional-prizes h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.additional-prizes p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Responsive Design for Weekly Schedule */
+@media (max-width: 768px) {
+    .weekly-schedule {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .schedule-tabs {
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .day-schedule {
+        padding: 25px;
+    }
+    
+    .day-title h3 {
+        font-size: 1.5rem;
+    }
+    
+    .prizes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .prize-card {
+        padding: 20px;
+    }
+    
+    .prize-title {
+        font-size: 1.1rem;
+    }
+    
+    .additional-prizes {
+        padding: 20px;
+    }
+    
+    .additional-prizes h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .prizes-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Scroll to Top Button */
